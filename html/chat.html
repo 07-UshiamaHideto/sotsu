@@ -1,0 +1,390 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>栞計画　チャット</title>
+<meta name="keywords" content="旅,計画,チャット,">
+<meta name="description" content="みんなの行きたいを支援するサービス！">
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=ture&language=ja"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+<script>
+map();
+</script>
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/chat.css" type="text/css">
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="l_title">
+			<h1>栞計画</h1>
+		</div>
+		<div id="r_title">
+			<div id="conpany_p">
+				<a href="#">FAQ</a>
+				<a href="#">サービス紹介</a>
+				<a href="#">利用規約</a>
+				<!--  <a href="#">会社概要</a>  -->
+			</div><div id="login_p">
+				<a href="#">マイ ページ</a>
+				<a href="#">スケジュールリスト</a>
+				<a href="#">設定</a>
+				<a href="#">ログアウト</a>
+			</div>
+		</div>
+	</div>
+	<div id="menu">
+		<h2>
+			<span id="sch_t">スケジュール名：</span><br>
+			<span id="sch_name">新潟散歩</span>
+		</h2>
+	</div>
+	<div id="tab">
+		<ul id="tab_area">
+			<li id="tab_1">スケジュール</li>
+			<li id="tab_2">イベント/訪問先 詳細</li>
+			<li id="tab_3">地図</li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="l_side">
+			<div id="map"></div>
+			<ul id="place_d">
+				<li class="place_p">
+					<div class="place_l">
+						<div class="place_t">場所／目的地：</div>
+						<div class="place_n">東京駅</div>
+					</div>
+					<div class="place_r">
+						<div id="purpose">編集</div>
+					</div>
+				</li>
+				<li class="place_info">
+					<div class="place_l">
+						<div class="place_t">情報：</div>
+						<div class="place_area">
+							東京駅
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_info">編集</div>
+					</div>
+				</li>
+				<li class="place_tag">
+					<div class="place_l">
+						<div class="place_t">周辺情報：</div>
+						<div class="place_area">
+							東京駅
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_aro">編集</div>
+					</div>
+				</li>
+				<li class="place_meno">
+					<div class="place_l">
+						<div class="place_t">メモ：</div>
+						<div class="place_area">
+							弁当とか買うのもいいかも！<br>
+							崎陽軒のシュウマイ弁当！定番！<br>
+							構外の一番街もいろいろなショップがあっておもしろいかも。
+
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_memo">編集</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="r_side">
+			<div id="now">
+				<div class="now_title">現在(日時) ：</div>
+				<div class="now_d">2月18日</div>
+				<div class="now_t">8:35</div>
+			</div>
+			<div id="c_menber">
+				<div class="c_men_text">メンバー <span>（5人)</span></div>
+				<ul class="c_men_area">
+					<li class="icon_1">山田</li>
+					<li class="icon_2">ムラ</li>
+					<li class="icon_3">東</li>
+					<li class="icon_4">とく</li>
+				</ul>
+			</div>
+
+			<div class="postarea cf">
+
+				<div class="postarea-text">
+					<textarea name="" id="content" cols="30" rows="5" placeholder="Enterで投稿"></textarea>
+				</div>
+				<div class="postarea-bu">
+					<button id="post" class="postarea-button">投稿する</button>
+				</div>
+				<div class="postarea-under">
+					<div class="switch_text">
+						現在位置情報付加：
+					</div>
+					<div class="switch">
+						<input id="switch" checked type="checkbox">
+							<label for="switch"></label>
+					</div>
+				</div>
+			</div>
+
+			<div id="messages" class="content">
+				<ul id="mes">
+					<li id="chat_uid01sid01_20150218083045" class="chat_my">
+						<div class="c_menber icon_my">自分</div>
+						<div class="c_l">
+							<div class="c_mes my_part">
+								<div class="c_time my_me">
+									2015/2/18 8:22:45 <span>(15分前)</span>
+								</div>
+								<div class="c_message my_me">
+									集合地点に到着！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+						</div>
+					</li>
+					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>
+					<li id="chat_uid01sid01_20150218083045" class="chat_my">
+						<div class="c_menber icon_my">自分</div>
+						<div class="c_l">
+							<div class="c_mes my_part">
+								<div class="c_time my_me">
+									2015/2/18 8:22:45 <span>(15分前)</span>
+								</div>
+								<div class="c_message my_me">
+									集合地点に到着！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+						</div>
+					</li>
+					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_4">とく</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>
+					<li id="chat_uid01sid01_20150218083045" class="chat_my">
+						<div class="c_menber icon_my">自分</div>
+						<div class="c_l">
+							<div class="c_mes my_part">
+								<div class="c_time my_me">
+									2015/2/18 8:22:45 <span>(15分前)</span>
+								</div>
+								<div class="c_message my_me">
+									集合地点に到着！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+						</div>
+					</li>
+					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_4">とく</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>
+					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_4">とく</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
+						<div class="c_menber icon_1">山田</div>
+						<div class="c_l">
+							<div class="c_mes ot_part">
+								<div class="c_time">
+									2015/2/18 8:22:45 <span>(10分前)</span>
+								</div>
+								<div class="c_message">
+									秋葉原駅で乗り換え中！
+								</div>
+							</div>
+							<div class="c_btn">
+								<div class="loc_y"></div>
+								<div class="c_btn">
+									位置<br>表示
+							</div>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="cr">Copyrigh © 2016 Hideto Ushiama All Rights Reserved</div>
+	</div>
+</div>
+</body>
+</html>

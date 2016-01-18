@@ -1,0 +1,280 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>栞計画</title>
+<meta name="keywords" content="旅,計画,チャット,">
+<meta name="description" content="みんなの行きたいを支援するサービス！">
+
+<script src="http://maps.google.com/maps/api/js?sensor=ture&language=ja"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+<script>
+map();
+</script>
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/schedule.css" type="text/css">
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="l_title">
+			<h1>栞計画</h1>
+		</div>
+		<div id="r_title">
+			<div id="conpany_p">
+				<a href="#">FAQ</a>
+				<a href="#">サービス紹介</a>
+				<a href="#">利用規約</a>
+				<!--  <a href="#">会社概要</a>  -->
+			</div><div id="login_p">
+				<a href="#">マイ ページ</a>
+				<a href="#">スケジュールリスト</a>
+				<a href="#">設定</a>
+				<a href="#">ログアウト</a>
+			</div>
+		</div>
+	</div>
+	<div id="menu">
+		<h2>
+			<span id="sch_t">スケジュール名：</span><br>
+			<span id="sch_name">新潟散歩</span>
+		</h2>
+	</div>
+	<div id="tab">
+		<ul id="tab_area">
+			<li id="tab_1">スケジュール</li>
+			<li id="tab_2">イベント/訪問先 詳細</li>
+			<li id="tab_3">地図</li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="l_side">
+			<div id="map"></div>
+			<ul id="place_d">
+				<li class="place_p">
+					<div class="place_l">
+						<div class="place_t">場所／目的地：</div>
+						<div class="place_n">東京駅</div>
+					</div>
+					<div class="place_r">
+						<div id="purpose">編集</div>
+					</div>
+				</li>
+				<li class="place_info">
+					<div class="place_l">
+						<div class="place_t">情報：</div>
+						<div class="place_area">
+							東京駅
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_info">編集</div>
+					</div>
+				</li>
+				<li class="place_tag">
+					<div class="place_l">
+						<div class="place_t">周辺情報：</div>
+						<div class="place_area">
+							東京駅
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_aro">編集</div>
+					</div>
+				</li>
+				<li class="place_meno">
+					<div class="place_l">
+						<div class="place_t">メモ：</div>
+						<div class="place_area">
+							弁当とか買うのもいいかも！<br>
+							崎陽軒のシュウマイ弁当！定番！<br>
+							構外の一番街もいろいろなショップがあっておもしろいかも。
+
+						</div>
+					</div>
+					<div class="place_r">
+						<div id="pur_memo">編集</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div id="r_side">
+			<div id="sch_date">
+				<div class="sch_day">2月18日</div>
+			</div>
+			<ul>
+				<li id="sch_uid01sid01s01" class="loc_part">
+					<div class="s_dt">
+						<div class="sch_place">自宅出発</div>
+						<div class="sch_time">発 07:00</div>
+					</div>
+					<div class="s_foot">
+						<div class="sch_l"></div>
+						<div class="sch_btn">
+							<div class="btn">地図</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01s02" class="tra_part">
+					<div class="s_top">
+						<div class="sch_l"></div>
+					</div>
+					<div class="s_dt">
+						<div class="sch_iw"></div>
+						<div class="sch_tra">
+							<span class="tar_title">徒歩</span><br>
+							<span class="tar_time">時間：10分</span>
+						</div>
+					</div>
+					<div class="s_root">
+						<div class="sch_l2"></div>
+						<div class="sch_btn">
+							<div class="btn">ルート</div>
+							<div class="btn">編集</div>
+						</div>
+					</div>
+					<div class="s_footer">
+					</div>
+					<div class="s_arr">
+						<div class="sch_place">東小金井駅</div>
+						<div class="sch_time">着 07:20</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01s03" class="loc_part">
+					<div class="s_dt">
+						<div class="sch_place">東小金井駅</div>
+						<div class="sch_time">発 07:20</div>
+					</div>
+					<div class="s_foot">
+						<div class="sch_l"></div>
+						<div class="sch_btn">
+							<div class="btn">地図</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01s04" class="tra_part">
+					<div class="s_top">
+						<div class="sch_l"></div>
+					</div>
+					<div class="s_dt">
+						<div class="sch_it"></div>
+						<div class="sch_tra">
+							<span class="tar_title">ＪＲ中央線・東京行</span><br>
+							<span class="tar_time">時間：37分／464円</span>
+						</div>
+					</div>
+					<div class="s_root">
+						<div class="sch_l2"></div>
+						<div class="sch_btn">
+							<div class="btn">ルート</div>
+							<div class="btn">編集</div>
+						</div>
+					</div>
+					<div class="s_footer">
+					</div>
+				</li>
+				<li id="sch_uid01sid01s03" class="loc_part">
+					<div class="s_dt">
+						<div class="sch_place">東京駅</div>
+						<div class="sch_time">着 08:01</div>
+					</div>
+					<div class="s_foot">
+						<div class="sch_l"></div>
+						<div class="sch_btn">
+							<div class="btn">地図</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01s04" class="tra_part">
+					<div class="s_top">
+						<div class="sch_l"></div>
+					</div>
+					<div class="s_dt">
+						<div class="sch_im"></div>
+						<div class="sch_tra">
+							<div class="ev_area">
+								<div class="ev_name">待ち合わせ</div>
+								<div class="ev_time">8:30</div>
+							</div>
+							<div class="ev_title">東京駅南口改札前(構内)</div>
+						</div>
+					</div>
+					<div class="s_root">
+						<div class="sch_l2"></div>
+						<div class="sch_btn">
+							<!--  div class="btn">ルート</div  -->
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+					<div class="s_footer">
+					</div>
+
+				</li>
+				<li id="sch_uid01sid01s03" class="loc_part">
+					<div class="s_dt">
+						<div class="sch_place">東京駅</div>
+						<div class="sch_time">発 09:12</div>
+					</div>
+					<div class="s_foot">
+						<div class="sch_l"></div>
+						<div class="sch_btn">
+							<div class="btn">地図</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01s04" class="tra_part">
+					<div class="s_top">
+						<div class="sch_l"></div>
+					</div>
+					<div class="s_dt">
+						<div class="sch_it"></div>
+						<div class="sch_tra">
+							<span class="tar_title">ＪＲ新幹線・新潟行</span><br>
+							<span class="tar_time">時間：1時間37分／10,050円</span>
+						</div>
+					</div>
+					<div class="s_root">
+						<div class="sch_l2"></div>
+						<div class="sch_btn">
+							<div class="btn">ルート</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+					<div class="s_footer">
+					</div>
+
+				</li>
+				<li id="sch_uid01sid01s07" class="loc_part">
+					<div class="s_dt">
+						<div class="sch_place">新潟駅</div>
+						<div class="sch_time">着 10:49</div>
+					</div>
+					<div class="s_foot">
+						<div class="sch_s"></div>
+						<div class="sch_btn">
+							<div class="btn">地図</div>
+							<div class="btn">詳細</div>
+						</div>
+					</div>
+				</li>
+				<li id="sch_uid01sid01end" class="new_part">
+					<div class="s_new">
+						次の目的地を登録する
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="cr">Copyrigh © 2016 Hideto Ushiama All Rights Reserved</div>
+	</div>
+</div>
+</body>
+</html>

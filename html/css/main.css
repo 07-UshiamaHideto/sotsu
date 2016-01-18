@@ -1,0 +1,33 @@
+/* */
+body {background-color:#fff0;text-align:center;}
+
+#wrapper{width:1000px;margin:5px auto;}
+
+#header {height:60px;border:1px solid #ddd;}
+
+#l_title{display: inline-block;width:145px;height:60px;zoom: 1;vertical-align:top;}
+h1 {color:#677430;font-size:28px;line-height:60px;font-weight:bold;text-align:left;}
+
+#r_title{display: inline-block;width:840px;height:60px;zoom: 1;vertical-align:top;font-weight:bold;}
+#conpany_p {text-align:right;vertical-align:top;font-size:12px;line-height:14px;padding-top:5px;font-weight:normal;}
+#conpany_p a{margin-right:10px;}
+#conpany_p a:hover{text-decoration:underline;}
+#login_p {color:#82B73D;text-align:right;vertical-align:bottom;font-size:14px;line-height:16px;font-weight:bold;padding-top:20px;}
+#login_p a{color:#82B73D;margin-right:10px;}
+#login_p a:hover{text-decoration:underline;}
+
+#menu{height:50px;background-color:#91b000;padding:10px 15px 0 15px;}
+h2{margin:10px 0 0 10x;text-align:left;}
+#sch_t{font-size:12px;color:#fff;font-weight:normal;}
+#sch_name{font-size:20px;line-height:30px;letter-spacing:2px;color:#fff;}
+#tab{height:27px;border-bottom:5px solid #000;background-color:#91b000;padding-left:15px;text-align:left;vertical-align:bottom;}
+#tab_1,#tab_2,#tab_3{display: inline-block;margin-right:15px;color:#fff;background-color:#677430;padding:8px 20px 5px 20px;margin-right:5px;}
+
+
+#main{font-size:37px;color:#000;width:100%;text-align:center;}
+
+#map{border:1px solid #666;width:590px;height: 590px;margin:5px;}
+
+#footer {background-color:#91b000;height:40px;border-top:2px solid #d4d4d4;}
+.cr {padding-top:10px;color:#fff;}
+
