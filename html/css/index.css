@@ -4,6 +4,24 @@
 
 #map{border:1px solid #666;width:590px;height: 590px;margin:5px;}
 
+.com_title {text-align:left;padding:10px 15px 10px 0;margin-top:5px;background-color:#392e2a;}
+.com_title span {color:#fff;font-size:18px;margin-left:10px;}
+
+#schedule {margin:0 5px;}
+#schedule li {border-left:4px solid #333;border-bottom:1px solid #ddd;margin:2px 0;text-align:left;padding:5px 0 10px 10px;}
+.sche_l {display: table-cell;width:500px;text-align:left;}
+.sche_r {display: table-cell;width:100px;text-align:right;vertical-align:top;}
+.sche_r div {width:60px;text-align:center;letter-spacing:5px;padding:5px 15px;margin:5px 5px;background-color:#f06100;color:#fff;border-radius:2px;}
+.sche_title {font-size:10px;letter-spacing:1px;}
+.sche_name {font-size:20px;letter-spacing:2px;font-weight:bold;margin-top:5px;}
+.sche_date {font-size:14px;letter-spacing:2px;margin-top:5px;}
+.sche_place {font-size:14px;letter-spacing:2px;margin-top:5px;}
+
+.new_btn{background-color:#f06100;padding:15px 0;}
+.sche_new {color:#fff;font-size:20px;padding:10px 0;margin:10px auto;width:300px;text-align:center; border:1px solid #fff;border-radius:2px;}
+.arc_btn{background-color:#F1F0EC;padding:15px 0;}
+.sche_arc {color:#888;font-size:20px;padding:10px 0;margin:10px auto;width:300px;text-align:center; border:1px solid #888;border-radius:2px;}
+
 #place_d {margin:0 5px;}
 #place_d li {border-left:4px solid #333;border-bottom:1px solid #ddd;margin:2px 0;text-align:left;padding:5px 0 10px 10px;}
 .place_l {display: table-cell;width:500px;text-align:left;}
@@ -14,6 +32,26 @@
 .place_area {font-size:16px;letter-spacing:2px;margin-top:5px;}
 
 #r_side {display: table-cell;width:400px;vertical-align:top;color:#000;border-left:1px solid #999;border-right:1px solid #999;}
+
+.l_title {text-align:left;background-color: #392e2a;padding:10px 0 10px 15px;color:#fff;font-size:18px;}
+#event {}
+.eb_l {display: table-cell;width:150px;text-align:left;}
+.eve_part {background-color:#4C281B;margin:2px 2px 0 2px;}
+.event_ent {background-color:#f06100;padding:15px 0;margin-top:2px;}
+
+.event_nex {background-color:#F1F0EC;padding:10px 0;margin-top:3px;}
+.s_nex {color:#666;font-size:16px;padding:10px 15px;margin:5px auto; border:1px solid #666;width:200px;border-radius:2px;}
+
+.pla_part {background-color:#0B1F12;margin:2px 2px 0 2px;}
+.pla_ent {background-color:#f06100;padding:15px 0;margin-top:2px;}
+
+.event_nex {background-color:#F1F0EC;padding:10px 0;margin-top:3px;}
+
+
+
+
+
+
 .loc_part{background-color:#e7e6e1;}
 .s_dt {padding:10px;}
 .sch_place {display: table-cell;width:300px;text-align:left;font-weight:normal;}

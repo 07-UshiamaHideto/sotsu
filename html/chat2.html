@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
- 
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <title>栞計画　チャット</title>
 <meta name="keywords" content="旅,計画,チャット,">
@@ -17,7 +15,7 @@ map();
 </script>
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/main.css" type="text/css">
-<link rel="stylesheet" href="css/chat.css" type="text/css">
+<link rel="stylesheet" href="css/chat2.css" type="text/css">
 
 </head>
 <body>
@@ -50,17 +48,107 @@ map();
 		<ul id="tab_area">
 			<li id="tab_1">スケジュール</li>
 			<li id="tab_2">イベント/訪問先 詳細</li>
-			<li id="tab_3">地図</li>
+			<li id="tab_3">メンバー詳細</li>
 		</ul>
 	</div>
 	<div id="main">
 		<div id="l_side">
+			<div id="event_plan">
+				<div class="sel_title">候補日程</div>
+				<div class="sel_form">
+					<form>
+					<ul>
+						<li>1/28(木) 19:00〜 <select name="s_date1"><option>参加</option><option>保留</option><option selected>不参加</option></select></li>
+						<li>1/29(金) 19:00〜 <select name="s_date2"><option>参加</option><option>保留</option><option selected>不参加</option></select></li>
+						<li>1/30(土) 19:00〜 <select name="s_date3"><option>参加</option><option>保留</option><option selected>不参加</option></select></li>
+					</ul>
+					<div class="e_comment">
+						<div class="comm_text">コメント</div>
+						<textarea id="area" /></textarea>
+					</div>
+					<div class="e_btn">
+						<input type="button" id="btn_dk" class="route_btn" value="登録する" onclick="dispRoute()" />
+					</div>
+					</form>
+				</div>
+					<div id="sch_uid01sid01end" class="pla_ent">
+						<div class="s_new">
+							詳細表示
+						</div>
+					</div>
+			</div>
+			<div id="place_plan">
+				<ul>
+					<div class="sel_title">集合地点 ／ 目的地 候補：</div>
+					<li id="sch_uid01sid01s01" class="pla_part">
+						<div class="s_dt">
+							<div class="sch_im"></div>
+							<div class="sch_tra">
+								<div class="ev_area">
+									<div class="ev_name">待ち合わせ</div>
+									<div class="ev_time">8:30</div>
+								</div>
+								<div class="ev_title">東京駅南口改札前(構内)</div>
+							</div>
+						</div>
+						<div class="s_root">
+							<div class="eb_l"></div>
+							<div class="sch_btn">
+								<!--  div class="btn">ルート</div  -->
+								<div class="btn">詳細</div>
+							</div>
+						</div>
+					</li>
+					<li id="sch_uid01sid01s01" class="pla_part">
+						<div class="s_dt">
+							<div class="sch_im"></div>
+							<div class="sch_tra">
+								<div class="ev_area">
+									<div class="ev_name">待ち合わせ</div>
+									<div class="ev_time">8:30</div>
+								</div>
+								<div class="ev_title">東京駅南口改札前(構内)</div>
+							</div>
+						</div>
+						<div class="s_root">
+							<div class="eb_l"></div>
+							<div class="sch_btn">
+								<!--  div class="btn">ルート</div  -->
+								<div class="btn">詳細</div>
+							</div>
+						</div>
+					</li>
+					<li id="sch_uid01sid01s01" class="pla_part">
+						<div class="s_dt">
+							<div class="sch_im"></div>
+							<div class="sch_tra">
+								<div class="ev_area">
+									<div class="ev_name">待ち合わせ</div>
+									<div class="ev_time">8:30</div>
+								</div>
+								<div class="ev_title">東京駅南口改札前(構内)</div>
+							</div>
+						</div>
+						<div class="s_root">
+							<div class="eb_l"></div>
+							<div class="sch_btn">
+								<!--  div class="btn">ルート</div  -->
+								<div class="btn">詳細</div>
+							</div>
+						</div>
+					</li>
+					<li id="sch_uid01sid01end" class="pla_ent">
+						<div class="s_new">
+							場所を登録する
+						</div>
+					</li>
+				</ul>
+			</div>
 			<div id="map"></div>
-
 			<ul id="place_d">
 				<li class="place_p">
 					<div class="place_l">
-						<div class="place_t">集合地点／目的地：</div>
+						<div class="place_t">集合地点 ／ 目的地：</div>
 						<div class="place_n">東京駅</div>
 					</div>
 					<div class="place_r">

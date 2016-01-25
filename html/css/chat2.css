@@ -2,6 +2,27 @@
 
 #l_side {display: table-cell;width:600px;vertical-align:top;color:#000;border-left:1px solid #999;}
 
+#event_plan {background-color:#BDB500;margin-bottom:3px;}
+.sel_title {padding:10px 0 10px 15px;color:#fff;text-align:left;background-color: #274E02;}
+.sel_form {margin:20px 5px 0 5px;padding-bottom:25px;}
+.sel_form ul{display: table-cell;width:240px;vertical-align:top;}
+.sel_form .e_comment{display: table-cell;width:200px;vertical-align:top;}
+.sel_form li {margin-bottom:10px;color:#fff;}
+.sel_form li select {margin-left:10px;}
+.sel_form textarea {height:70px; width:190px}
+.comm_text{color:#fff;margin-bottom:5px;}
+.e_btn {display: table-cell;width:150px;padding-top:20px;}
+#btn_dk {padding:20px 25px;border-radius:5px;color:#fff;font-weight:bold;}
+
+#sche_plan li {margin:10px 0 5px 25px;text-align:left;}
+.e_comment {text-align:left;}
+.e_comment textarea {border-radius:4px;}
+
+.pla_part {background-color:#0B1F12;margin:2px 2px 0 2px;}
+.pla_ent {background-color:#f06100;padding:15px 0;margin-top:2px;}
+
+.event_nex {background-color:#F1F0EC;padding:10px 0;margin-top:3px;}
+
 #map{border:1px solid #666;width:590px;height: 490px;margin:5px;}
 
 #place_d {margin:0 5px;}
