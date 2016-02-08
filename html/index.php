@@ -1,3 +1,10 @@
+<?php
+
+//$u_id = $_GET["u_id"];
+$u_id = 1;
+include("lib/config.php");
+
+?>
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -21,12 +28,12 @@ map();
 <?php include("header.php"); ?>
 	<div id="main">
 		<div id="l_side">
-			<?php include("schedule.php"); ?>
+			<?php include("part/schedule.php"); ?>
 		</div>
 
 		<div id="r_side">
-			<?php include("event.php"); ?>
-			<?php include("place.php"); ?>
+			<?php include("part/event.php"); ?>
+			<?php include("part/place.php"); ?>
 		</div>
 	</div>
 <?php include("footer.php"); ?>
