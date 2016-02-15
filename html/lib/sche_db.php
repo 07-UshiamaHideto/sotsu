@@ -30,7 +30,9 @@ foreach($results2 as $row2) {
 
 	$view .= "</div>";
 	$view .= "</div>";
-	$view .= "<div class=\"sche_r\"><div class=\"purpose\">詳細</div></div>";
+	$view .= "<div class=\"sche_r\">";
+	$view .= "<form method=\"POST\" action=\"schedule.php\"><input type=\"hidden\" name=\"s_id\" value=\"". $row["s_id"] ."\"><input type=\"submit\" class=\"purpose\" value=\"詳細\"></form>";
+	$view .= "</div>";
 	$view .= "</li>";
 }
 // table閉じタグで終了
@@ -67,7 +69,7 @@ foreach($results_a2 as $row_a2) {
 
 	$view2 .= "</div>";
 	$view2 .= "</div>";
-	$view2 .= "<div class=\"sche_r\"><div class=\"purpose\">詳細</div></div>";
+	$view2 .= "<div class=\"sche_r\"><form method=\"POST\" action=\"schedule.php\"><input type=\"hidden\" name=\"s_id\" value=\"". $row["s_id"] ."\"><input type=\"submit\" class=\"purpose\" value=\"詳細\"></form></div>";
 	$view2 .= "</li>";
 }
 

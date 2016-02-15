@@ -82,6 +82,7 @@ INSERT INTO place (p_id, p_name, u_id,p_memo,adress , pub_show, created, modifie
 INSERT INTO place (p_id, p_name, u_id,p_memo,adress , pub_show, created, modified) VALUES(NULL,'パシフィコ横浜',1,'日本最大の複合コンベンションセンター パシフィコ横浜','パシフィコ横浜',1,SYSDATE() ,SYSDATE());
 
 INSERT INTO place (p_id, p_name, u_id,p_memo,adress , pub_show, created, modified) VALUES(NULL,'東京駅',1,'東京駅','東京駅',1,SYSDATE() ,SYSDATE());
+INSERT INTO place (p_id, p_name, u_id,p_memo,adress , pub_show, created, modified) VALUES(NULL,'新潟駅',1,'新潟駅','新潟駅',1,SYSDATE() ,SYSDATE());
 
 create table route (
   r_id int not null auto_increment primary key,
@@ -100,6 +101,7 @@ create table route (
 );
 
 INSERT INTO place (p_id, p_name, u_id,p_memo,adress , pub_show, created, modified) VALUES(NULL,'東京駅',1,'東京駅','東京駅',1,SYSDATE() ,SYSDATE());
+
 
 create table ev_s (
   es_id int not null auto_increment primary key,
@@ -124,6 +126,10 @@ INSERT INTO ev_s (es_id, s_id, e_id, p_id, ev_start, ev_finish, pub_show, create
 (NULL,2,NULL,1,CAST( '2016-02-13 08:00:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE()),
 (NULL,2,NULL,10,CAST( '2016-02-13 09:00:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE()),
 (NULL,2,NULL,3,CAST( '2016-02-13 09:30:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE());
+
+(NULL,1,1,NULL,CAST( '2016-02-13 10:00:00' AS DATETIME),CAST( '2016-02-27 16:00:00' AS DATETIME),1,SYSDATE() ,SYSDATE()),
+
+INSERT INTO ev_s (es_id, s_id, e_id, p_id, ev_start, ev_finish, pub_show, created, modified) VALUES(NULL,1,NULL,1,CAST( '2016-02-13 08:00:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE()),(NULL,1,NULL,16,CAST( '2016-02-13 09:00:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE()),(NULL,1,NULL,5,CAST( '2016-02-13 09:30:00' AS DATETIME),NULL,1,SYSDATE() ,SYSDATE());
 
 SELECT * FROM goods INNER JOIN cate ON goods.cateid = cate.id;
 

@@ -1,0 +1,17 @@
+/* */
+fieldset {text-align:left;}
+
+legend {padding: 10px 0 10px 15px;color: #fff;text-align: left;background-color: #1F350A;width:100%;}
+
+.form_area{margin:5px;}
+
+label {padding:5px;margin:5px;display:block;border-left: 4px solid #333;border-bottom: 1px solid #ddd;margin: 2px 0;text-align: left;padding: 5px 0 10px 10px;}
+
+fieldset label p {font-size: 12px;letter-spacing: 1px;margin-right:5px;margin-bottom:10px;}
+fieldset label span {font-size: 12px;letter-spacing: 1px;margin-right:5px;}
+
+#form_title{width:400px;padding:3px 0 3px 5px;border-radius:3px;}
+#form_ta{width:400px;height:100px;padding:3px 0 3px 5px;border-radius:3px;}
+#dateps,#datepe {width:100px;padding:3px 0 3px 10px;letter-spacing:2px;border-radius:3px;}
+
+.btn_regi {width: 120px;text-align: center;letter-spacing: 5px;padding: 5px 15px;margin: 5px 5px;background-color: #f06100;color: #fff;border-radius: 3px;border:1px solid #f06100;font-weight:bold;}

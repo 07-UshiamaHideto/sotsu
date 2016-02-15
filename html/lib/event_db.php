@@ -1,7 +1,7 @@
 <?php
 
 $pdo = new PDO(DSN, DB_USERNAME, DB_PASSWORD);
-$sql = "SELECT * FROM event WHERE u_id = " . $u_id;
+$sql = "SELECT * FROM event WHERE u_id = " . $u_id . "ORDER BY event LIMIT 5";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

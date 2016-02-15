@@ -22,8 +22,8 @@ h2{margin:10px 0 0 10x;text-align:left;}
 #sch_name{font-size:20px;line-height:30px;letter-spacing:2px;color:#fff;}
 #tab{height:27px;border-bottom:5px solid #000;background-color:#91b000;padding-left:15px;text-align:left;vertical-align:bottom;}
 #tab_1,#tab_2,#tab_3,#tab_4{display: inline-block;margin-right:15px;color:#fff;background-color:#677430;padding:8px 20px 5px 20px;margin-right:5px;}
-
-
+#tab_1 a,#tab_2 a,#tab_3 a,#tab_4 a {color:#fff;}
+#tab_1 a:hover,#tab_2 a:hover,#tab_3 a:hover,#tab_4 a:hover {color:#f00;}
 #main{font-size:37px;color:#000;width:100%;text-align:center;}
 
 #footer {background-color:#91b000;height:40px;border-top:2px solid #d4d4d4;}
