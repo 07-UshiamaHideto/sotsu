@@ -1,88 +1,76 @@
 <?php
+
 //$u_id = $_GET["u_id"];
 $u_id = 1;
-$pdo = new PDO("mysql:host=localhost;dbname=shiori_plan;charset=utf8", "root", "");
-$sql = "SELECT * FROM event WHERE u_id = " . $u_id;
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-//var_dump($results);
-// HTML出力用の変数 $view を宣言
-$view = "";
 
-// $view に表示する文字列を追記していく
-//$view .= "<table>";
-foreach($results as $row) {
-//	var_dump($row);
-	$view .= "<li id=\"sch_uid" . $row["u_id"] . "eid" . $row["e_id"] . "\" class=\"eve_part\">";
-	$view .= "<div class=\"s_dt\"><div class=\"sch_im\"></div>";
-	$view .= "<div class=\"sch_tra\"><div class=\"ev_area\">";
-	$view .= "<div class=\"ev_name\">イベント</div>";
-	$view .= "<div class=\"ev_time\">" . $row["start"] . "</div>";
-	$view .= "</div>";
-	$view .= "<div class=\"ev_title\">" . $row["e_name"] . "</div>";
-	$view .= "</div></div>";
-	$view .= "<div class=\"s_root\"><div class=\"eb_l\"></div>";
-	$view .= "<div class=\"sch_btn\"><div class=\"btn\">詳細</div></div>";
-	$view .= "</div>";
-	$view .= "</li>";
-}
-// table閉じタグで終了
-//$view .= "</table>";
-$pdo = null;
+include("lib/config.php");
+
 ?>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>栞計画　|　イベントリスト</title>
+<meta name="keywords" content="旅,計画,チャット,">
+<meta name="description" content="みんなの行きたいを支援するサービス！">
 
-<div id="event">
-	<div class="l_title">気になる イベント / 訪問先</div>
-	<ul>
-		<li class="event_ent">
-			<div class="s_new">
-				イベントを登録する
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=ture&language=ja"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+<script>
+map();
+</script>
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" href="css/chat2.css" type="text/css">
+
+</head>
+<body>
+<div id="wrapper">
+<?php include("header.php"); ?>
+	<div id="main">
+		<div id="l_side">
+			<div id="event_plan">
+				<div class="sel_title">イベント</div>
 			</div>
-		</li>
-<?php echo $view ?>
-		<li id="sch_uid01sid01s01" class="eve_part">
-			<div class="s_dt">
-				<div class="sch_im"></div>
-				<div class="sch_tra">
-					<div class="ev_area">
-						<div class="ev_name">待ち合わせ</div>
-						<div class="ev_time">8:30</div>
-					</div>
-					<div class="ev_title">東京駅南口改札前(構内)</div>
+<?php include("lib/event_part.php"); ?>
+			<div id="map"></div>
+			<div id="route">
+				<div class="route_t">ルート検索</div>
+				<div class="route_search">
+					<form>
+						<div class="route_form">
+							<span class="route_d">出発</span><input type="text" size="20" id="from" value="武蔵境駅" />
+							<span class="route_bt">～</span>
+							<span class="route_a">到着</span><input type="text" size="20" id="to" value="東京駅" />
+						</div>
+						<div class="route_form">
+							<span class="route_b">経由</span><input type="text" size="20" id="step" value="秋葉原" />
+						</div>
+						<div class="route_form">
+							<input type="button" id="btn1" class="route_btn" value="ルート案内" onclick="dispRoute()" />
+						</div>
+					</form>
+				</div>
+				<div class="route_result">
 				</div>
 			</div>
-			<div class="s_root">
-				<div class="eb_l"></div>
-				<div class="sch_btn">
-					<!--  div class="btn">ルート</div  -->
-					<div class="btn">詳細</div>
-				</div>
+			</ul>
+		</div>
+
+		<div id="r_side">
+			<div id="now">
+				<div class="now_title">現在(日時) ：</div>
+				<div class="now_d">2月18日</div>
+				<div class="now_t">8:35</div>
 			</div>
-		</li>
-		<li id="sch_uid01sid01s01" class="eve_part">
-			<div class="s_dt">
-				<div class="sch_im"></div>
-				<div class="sch_tra">
-					<div class="ev_area">
-						<div class="ev_name">待ち合わせ</div>
-						<div class="ev_time">8:30</div>
-					</div>
-					<div class="ev_title">東京駅南口改札前(構内)</div>
-				</div>
-			</div>
-			<div class="s_root">
-				<div class="eb_l"></div>
-				<div class="sch_btn">
-					<!--  div class="btn">ルート</div  -->
-					<div class="btn">詳細</div>
-				</div>
-			</div>
-		</li>
-		<li id="sch_uid01sid01end" class="event_nex">
-			<div class="s_nex">
-				次の5件を見る
-			</div>
-		</li>
-	</ul>
+			<?php include("part/place.php"); ?>
+
+		</div>
+	</div>
+<?php include("footer.php"); ?>
 </div>
+</body>
+</html>

@@ -25,8 +25,8 @@
 </div>
 <div id="tab">
 	<ul id="tab_area">
-		<li id="tab_1">スケジュールリスト</li>
-		<li id="tab_2">イベント/訪問先 詳細</li>
-		<li id="tab_3">お気に入り場所</li>
+		<li id="tab_1"><a href="schedule.php">スケジュールリスト</a></li>
+		<li id="tab_2"><a href="event.php">イベント/訪問先 詳細</a></li>
+		<li id="tab_3"><a href="place.php">お気に入り場所</a></li>
 	</ul>
 </div>
