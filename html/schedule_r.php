@@ -3,11 +3,11 @@
 //$u_id = $_GET["u_id"];
 $u_id = 1;
 
-if (isset($_POST["p_id"] )){
-$p_id = $_POST["p_id"];
-}
+//$s_id = $_POST["s_id"];
 
-//echo $p_id;
+if (isset($_POST["s_id"] )){
+$s_id = $_POST["s_id"];
+}
 
 include("lib/config.php");
 
@@ -15,7 +15,7 @@ include("lib/config.php");
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>栞計画　|　場所登録</title>
+<title>栞計画　|　スケジュール</title>
 <meta name="keywords" content="旅,計画,チャット,">
 <meta name="description" content="みんなの行きたいを支援するサービス！">
 
@@ -29,7 +29,6 @@ map();
 </script>
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/main.css" type="text/css">
-<link rel="stylesheet" href="css/index.css" type="text/css">
 <link rel="stylesheet" href="css/chat2.css" type="text/css">
 
 </head>
@@ -39,19 +38,9 @@ map();
 	<div id="main">
 		<div id="l_side">
 			<div id="event_plan">
-<?php
-if (isset($_POST["p_id"] )){
- echo "<div class=\"sel_title\">場所登録</div>";
- include("lib/place_part.php");
-
-} else {
-
- include("form/place_form.php");
-
-}
-
-?>
+				<div class="sel_title">スケジュール</div>
 			</div>
+<?php include("lib/sche_part.php"); ?>
 			<div id="map"></div>
 			<div id="route">
 				<div class="route_t">ルート検索</div>
@@ -82,8 +71,19 @@ if (isset($_POST["p_id"] )){
 				<div class="now_d">2月18日</div>
 				<div class="now_t">8:35</div>
 			</div>
-			<?php include("part/place.php"); ?>
+			<div id="c_menber">
+				<div class="c_men_text">メンバー <span>（5人)</span></div>
+				<ul class="c_men_area">
+					<li class="icon_1">山田</li>
+					<li class="icon_2">ムラ</li>
+					<li class="icon_3">東</li>
+					<li class="icon_4">とく</li>
+				</ul>
+			</div>
 
+			<div class="postarea cf">
+<?php include("part/schedule_list.php"); ?>
+			</div>
 		</div>
 	</div>
 <?php include("footer.php"); ?>

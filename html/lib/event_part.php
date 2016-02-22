@@ -1,7 +1,8 @@
 <?php
 
 //$s_id = $_GET["s_id"];
-$e_id = 2;
+//if (isset($_POST["e_id"] )){
+//}
 //include("config.php");
 
 $pdo = new PDO(DSN, DB_USERNAME, DB_PASSWORD);

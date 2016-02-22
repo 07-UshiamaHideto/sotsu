@@ -3,16 +3,16 @@ body {background-color:#fff0;text-align:center;}
 
 #wrapper{width:1000px;margin:5px auto;}
 
-#header {height:60px;border:1px solid #ddd;}
+#header {height:80px;border:1px solid #ddd;}
 
-#l_title{display: inline-block;width:145px;height:60px;zoom: 1;vertical-align:top;}
-h1 {color:#677430;font-size:28px;line-height:60px;font-weight:bold;text-align:left;}
+#l_title{display: inline-block;width:145px;height:80px;zoom: 1;vertical-align:top;}
+h1 {color:#677430;font-size:28px;line-height:80px;font-weight:bold;text-align:left;}
 
 #r_title{display: inline-block;width:840px;height:60px;zoom: 1;vertical-align:top;font-weight:bold;}
 #conpany_p {text-align:right;vertical-align:top;font-size:12px;line-height:14px;padding-top:5px;font-weight:normal;}
 #conpany_p a{margin-right:10px;}
 #conpany_p a:hover{text-decoration:underline;}
-#login_p {color:#82B73D;text-align:right;vertical-align:bottom;font-size:14px;line-height:16px;font-weight:bold;padding-top:20px;}
+#login_p {color:#82B73D;text-align:right;vertical-align:bottom;font-size:14px;line-height:16px;font-weight:bold;padding-top:40px;}
 #login_p a{color:#82B73D;margin-right:10px;}
 #login_p a:hover{text-decoration:underline;}
 

@@ -1,9 +1,9 @@
 /* */
 fieldset {text-align:left;}
 
-legend {padding: 10px 0 10px 15px;color: #fff;text-align: left;background-color: #1F350A;width:100%;}
-
-.form_area{margin:5px;}
+legend {width:100%;padding:10px 0;margin-right:5px;color: #fff;text-align: left;background-color: #1F350A;display:block;}
+legend span {padding-left:15px;}
+.form_area,.jumbotron{margin:5px;}
 
 label {padding:5px;margin:5px;display:block;border-left: 4px solid #333;border-bottom: 1px solid #ddd;margin: 2px 0;text-align: left;padding: 5px 0 10px 10px;}
 

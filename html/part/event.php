@@ -13,9 +13,9 @@ include("lib/event_db.php");
 	<div class="l_title">気になる イベント / 訪問先</div>
 	<ul>
 		<li class="event_ent">
-			<div class="s_new">
-				イベントを登録する
-			</div>
+			<a href="event.php">
+			<div class="s_new">イベントを登録する</div>
+			</a>
 		</li>
 
 <!-- 登録イベント表示 -->

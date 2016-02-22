@@ -11,9 +11,9 @@ include("lib/place_db.php");
 	<div class="l_title">気になる場所</div>
 	<ul>
 		<li id="sch_uid01sid01end" class="pla_ent">
-			<div class="s_new">
-				場所を登録する
-			</div>
+			<a href="place.php">
+			<div class="s_new">場所を登録する</div>
+			</a>
 		</li>
 
 <!-- 登録場所表示 -->

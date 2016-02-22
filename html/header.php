@@ -1,6 +1,6 @@
 <div id="header">
 	<div id="l_title">
-		<h1>栞計画</h1>
+		<h1><img src="imgs/title2.png" alt="栞計画"></h1>
 	</div>
 	<div id="r_title">
 		<div id="conpany_p">

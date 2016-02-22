@@ -1,7 +1,7 @@
 <?php
 
 $pdo = new PDO(DSN, DB_USERNAME, DB_PASSWORD);
-$sql = "SELECT * FROM place WHERE u_id = " . $u_id . " ORDER BY created LIMIT 5";
+$sql = "SELECT * FROM place WHERE u_id = " . $u_id . " ORDER BY created ";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -22,7 +22,9 @@ foreach($results as $row) {
 	$view .= "<div class=\"ev_title\">" . $row["p_name"] . "</div>";
 	$view .= "</div></div>";
 	$view .= "<div class=\"s_root\"><div class=\"eb_l\"></div>";
-	$view .= "<div class=\"sch_btn\"><div class=\"btn\">詳細</div></div>";
+	$view .= "<div class=\"sch_btn\">";
+	$view .= "<form method=\"POST\" action=\"place.php\"><input type=\"hidden\" name=\"p_id\" value=\"". $row["p_id"] ."\"><input type=\"submit\" class=\"purpose\" value=\"詳細\"></form>";
+	$view .= "</div>";
 	$view .= "</div>";
 	$view .= "</li>";
 }

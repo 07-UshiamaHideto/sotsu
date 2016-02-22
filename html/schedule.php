@@ -3,7 +3,11 @@
 //$u_id = $_GET["u_id"];
 $u_id = 1;
 
+//$s_id = $_POST["s_id"];
+
+if (isset($_POST["s_id"] )){
 $s_id = $_POST["s_id"];
+}
 
 include("lib/config.php");
 
@@ -25,6 +29,7 @@ map();
 </script>
 <link rel="stylesheet" href="css/reset.css" type="text/css">
 <link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/index.css" type="text/css">
 <link rel="stylesheet" href="css/chat2.css" type="text/css">
 
 </head>
@@ -36,8 +41,20 @@ map();
 			<div id="event_plan">
 				<div class="sel_title">スケジュール</div>
 			</div>
+
+<?php
+if (isset($_POST["s_id"] )){
+ echo "<div class=\"sel_title\">イベント</div>";
+ include("lib/sche_part.php");
+
+} else {
+
+ include("form/sche_form.php");
+
+}
+
+?>
 			<div id="map"></div>
-<?php include("lib/sche_part.php"); ?>
 			<div id="route">
 				<div class="route_t">ルート検索</div>
 				<div class="route_search">
@@ -78,265 +95,7 @@ map();
 			</div>
 
 			<div class="postarea cf">
-
-				<div class="postarea-text">
-					<textarea name="" id="content" cols="30" rows="5" placeholder="Enterで投稿"></textarea>
-				</div>
-				<div class="postarea-bu">
-					<button id="post" class="postarea-button">投稿する</button>
-				</div>
-				<div class="postarea-under">
-					<div class="switch_text">
-						現在位置情報付加：
-					</div>
-					<div class="switch">
-						<input id="switch" checked type="checkbox">
-							<label for="switch"></label>
-					</div>
-				</div>
-			</div>
-
-			<div id="messages" class="content">
-				<ul id="mes">
-					<li id="chat_uid01sid01_20150218083045" class="chat_my">
-						<div class="c_menber icon_my">自分</div>
-						<div class="c_l">
-							<div class="c_mes my_part">
-								<div class="c_time my_me">
-									2015/2/18 8:22:45 <span>(15分前)</span>
-								</div>
-								<div class="c_message my_me">
-									集合地点に到着！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-						</div>
-					</li>
-					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>
-					<li id="chat_uid01sid01_20150218083045" class="chat_my">
-						<div class="c_menber icon_my">自分</div>
-						<div class="c_l">
-							<div class="c_mes my_part">
-								<div class="c_time my_me">
-									2015/2/18 8:22:45 <span>(15分前)</span>
-								</div>
-								<div class="c_message my_me">
-									集合地点に到着！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-						</div>
-					</li>
-					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_4">とく</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>
-					<li id="chat_uid01sid01_20150218083045" class="chat_my">
-						<div class="c_menber icon_my">自分</div>
-						<div class="c_l">
-							<div class="c_mes my_part">
-								<div class="c_time my_me">
-									2015/2/18 8:22:45 <span>(15分前)</span>
-								</div>
-								<div class="c_message my_me">
-									集合地点に到着！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-						</div>
-					</li>
-					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_4">とく</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>
-					<li id="chat_uid04sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_4">とく</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>					<li id="chat_uid02sid01_20150218083045" class="chat_ot">
-						<div class="c_menber icon_1">山田</div>
-						<div class="c_l">
-							<div class="c_mes ot_part">
-								<div class="c_time">
-									2015/2/18 8:22:45 <span>(10分前)</span>
-								</div>
-								<div class="c_message">
-									秋葉原駅で乗り換え中！
-								</div>
-							</div>
-							<div class="c_btn">
-								<div class="loc_y"></div>
-								<div class="c_btn">
-									位置<br>表示
-							</div>
-
-						</div>
-					</li>
-				</ul>
+<?php include("part/schedule.php"); ?>
 			</div>
 		</div>
 	</div>

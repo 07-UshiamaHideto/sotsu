@@ -1,8 +1,8 @@
 <?php
 
-//$s_id = $_GET["s_id"];
-$p_id = 2;
-//include("config.php");
+// $s_id = $_GET["s_id"];
+// $p_id = 2;
+// include("config.php");
 
 $pdo = new PDO(DSN, DB_USERNAME, DB_PASSWORD);
 $sql = "SELECT * FROM place WHERE p_id = " . $p_id;

@@ -2,6 +2,7 @@
 
 //$s_id = $_GET["s_id"];
 //$s_id = 2;
+
 //include("config.php");
 
 $pdo = new PDO(DSN, DB_USERNAME, DB_PASSWORD);
